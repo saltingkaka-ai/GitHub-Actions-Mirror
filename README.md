@@ -4,10 +4,11 @@ Mirror file dari berbagai hosting ke GitHub Actions dengan satu command.
 
 ## 🚀 Quick Start
 
-```yaml
-- uses: actions/checkout@v4
-- run: python .github/scripts/main.py "URL_FILE_HOSTING" "nama_file.zip"
-```
+1. Fork repo ini
+2. Setup GitHub Secrets:
+   - `PIXELDRAIN_APIKEY` (Wajib jika ingin mirror ke PixelDrain)
+   - `GOFILE_APIKEY` (Opsional, GoFile bisa tanpa APIKEY)
+3. Trigger workflow dengan URL file yang ingin di-mirror
 
 ## ✅ Status Hosting
 
@@ -46,10 +47,14 @@ Mirror file dari berbagai hosting ke GitHub Actions dengan satu command.
 ## 📋 Cara Pakai
 
 ### Manual Trigger
-1. Go to **Actions** tab
-2. Pilih workflow **"File Mirror"**
-3. Klik **"Run workflow"**
-4. Masukkan URL dan nama file (opsional)
+1. Fork repo ini
+2. Setup GitHub Secrets (jika perlu)
+3. Go to **Actions** tab
+4. Pilih workflow **"File Mirror"**
+5. Klik **"Run workflow"**
+6. Masukkan URL dan nama file (opsional)
+7. Pilih file hosting tujuan (PixelDrain/GoFile)
+8. Klik **"Run"** dan tunggu proses selesai
 
 ### Auto-detect
 Script otomatis mendeteksi hosting dari URL — tidak perlu setting manual.
