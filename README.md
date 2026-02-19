@@ -1,6 +1,3 @@
- Berikut README simpel dengan tabel centang yang rapi dan mudah dipahami:
-
-```markdown
 # 🪞 File Mirror GitHub Actions
 
 Mirror file dari berbagai hosting ke GitHub Actions dengan satu command.
@@ -59,9 +56,13 @@ class NewHostingHandler(BaseHostingHandler):
         return direct_url
 ```
 
----
+## 🤝 Kontribusi
+- Fork repo ini
+- Buat branch baru untuk fitur/hosting baru
+- Submit pull request dengan penjelasan dan contoh URL
 
-*Centang (✅) tabel di atas saat hosting sudah tested berhasil.*
-```
+## 📄 License
+MIT License © 2024 [@profambatukam]
 
-Tampilannya bersih, tabelnya jelas, dan mudah di-update centangnya! 🎯
+## 📞 Contact
+- Telegram : @profambatukam
