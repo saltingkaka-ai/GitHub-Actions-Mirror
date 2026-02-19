@@ -20,6 +20,8 @@ Mirror file dari berbagai hosting ke GitHub Actions dengan satu command.
 | Google Drive | ⬜ | drive.google.com |
 | Dropbox | ⬜ | dropbox.com |
 | Mega.nz | ⬜ | mega.nz |
+| PixelDrain | ⬜ | pixeldrain.com |
+| GoFile | ⬜ | gofile.io |
 | Direct Link | ⬜ | URL langsung (.zip, .mp4, dll) |
 
 **Keterangan:**
