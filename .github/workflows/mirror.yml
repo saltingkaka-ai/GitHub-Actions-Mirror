@@ -1,0 +1,48 @@
+name: File Mirror
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Direct link atau URL file hosting'
+        required: true
+        type: string
+      filename:
+        description: 'Nama file output (opsional)'
+        required: false
+        type: string
+  push:
+    paths:
+      - '.github/scripts/**'
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r .github/scripts/requirements.txt
+    
+    - name: Run Mirror Script
+      env:
+        INPUT_URL: ${{ github.event.inputs.url }}
+        INPUT_FILENAME: ${{ github.event.inputs.filename }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        python .github/scripts/main.py "$INPUT_URL" "$INPUT_FILENAME"
+    
+    - name: Upload mirrored file
+      uses: actions/upload-artifact@v4
+      with:
+        name: mirrored-file
+        path: downloads/
+        retention-days: 7
