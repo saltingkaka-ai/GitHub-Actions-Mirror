@@ -28,6 +28,19 @@ Mirror file dari berbagai hosting ke GitHub Actions dengan satu command.
 - ❌ = Belum support/Broken
 - ⬜ = Dalam pengembangan
 
+## ✅ Status Mirror To
+
+| Hosting | Status | Keterangan | Limit Ukuran File |
+|---------|--------|------------|------------|
+| PixelDrain | ⬜ | Butuh APIKEY | 20GB (Free) |
+| GoFile | ⬜ | Tidak butuh APIKEY | Unlimited |
+
+**Keterangan:**
+- ✅ = Berfungsi & tested
+- ⚠️ = Partial/terkadang error
+- ❌ = Belum support/Broken
+- ⬜ = Dalam pengembangan
+
 ## 📋 Cara Pakai
 
 ### Manual Trigger
